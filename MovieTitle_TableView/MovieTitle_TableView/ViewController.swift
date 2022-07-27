@@ -8,7 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
-    let movies = ["Inception","The Revenant","Titanic","Catch Me If You Can","Shutter Island","The Great Gatsby"]
+    
+    let movies = ["Inception", "The Revenant", "Titanic", "Catch Me If You Can", "Shutter Island", "The Great Gatsby"]
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
@@ -20,22 +22,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
              return UITableViewCell()
          }
          cell.title1.text = movies[indexPath.row]
-         
-         return cell
-
+         cell.title1.sizeToFit()
+    
+        return cell
+        
     }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-      
-    
              }
 
 }
 class CustomCell: UITableViewCell {
     @IBOutlet weak var title1: UILabel!
+ 
     
 }
 
